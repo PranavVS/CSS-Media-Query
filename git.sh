@@ -15,6 +15,7 @@ filename="$file$filetype";
 # Get one random character from the strlen-character string (str):
 touch $filename;
 echo "$filename" >$filename;
+sleep 1;
 git add .;
 git commit -m 'Random commit complete using bash.';
 git push origin main;
