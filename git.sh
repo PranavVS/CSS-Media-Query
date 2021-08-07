@@ -9,13 +9,16 @@ strlen=${#str};
 
 # Get a random integer in the range 0..2 (0..strlen-1):
 let r=RANDOM*strlen/32768;
-
+filetype=".txt";
+file=${str:r:1};
+filename="$file$filetype";
 # Get one random character from the strlen-character string (str):
-touch ${str:r:1};
+touch $filename;
+echo "$filename" >$filename;
 git add .;
-git commit -m 'Hello commitcomplete using bash.';
+git commit -m 'Random commit complete using bash.';
 git push origin main;
-rm ${str:r:1};
+rm $filename;
 ((counter++));
 echo $counter;
 
