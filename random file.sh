@@ -10,7 +10,5 @@ let r=RANDOM*strlen/32768
 # Get one random character from the strlen-character string (str):
 touch ${str:r:1}
 sleep 5
-git add .;
-git commit -m 'Hello commitcomplete using bash.';
-git push origin main;
+echo ${str:r:1}
 rm ${str:r:1}
